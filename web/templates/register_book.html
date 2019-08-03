@@ -1,0 +1,29 @@
+# web/templates/register_book.html
+{% extends "base.html" %}
+{% block content %}
+  <div class="container">
+    <form class="form-group" method="POST" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+      <br>
+      <div class="form-group">
+        {{ form.img.label(class="form-control-label")  }}
+        {{ form.img(class="form-control form-control-file") }}
+
+        {{ form.title.label(class="form-control-label") }}
+        {{ form.title(class="form-control form-control-lg") }}
+
+        {{ form.author.label(class="form-control-label") }}
+        {{ form.author(class="form-control form-control-lg") }}
+
+        {{ form.genre.label(class="form-control-label") }}
+        {{ form.genre(class="form-control form-control-lg") }}
+
+        {{ form.date.label(class="form-control-label") }}
+        {{ form.date(class="form-control form-control-lg", placeholder="2019-5-1") }}
+        
+        {{form.submit(class="btn btn-primary" )}}
+      </div>
+
+    </form>
+  </div>
+{% endblock %}
